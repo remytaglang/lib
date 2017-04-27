@@ -1,0 +1,25 @@
+<h2>Artist <%= @artist.first["name"] %></h2>
+
+<table>
+  <% @albums.each do |album| %>
+    <tr>
+      <td>
+        <a href="/albums/<%=album["id"]%>">
+          <%= album["title"] %>
+        </a>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+
+<h3>Tracks by Genres</h3>
+<div>
+  <table>
+  <% @count_by_genre.each do |genre| %>
+    <tr>
+      <td><%= genre["count"] %> - <%= genre["name"] %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>

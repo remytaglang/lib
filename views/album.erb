@@ -1,0 +1,18 @@
+<h2>Album <%= @album %></h2>
+
+<h3>Tracks</h3>
+
+<table>
+  <% @tracks.each do |track| %>
+    <tr>
+      <td>
+        <a href="/tracks/<%=track["id"]%>">
+          <%= track["name"] %>
+        </a>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<br />
+
